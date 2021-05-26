@@ -11,12 +11,12 @@ jobs:
       - setup_remote_docker:
           version: 20.10.2
       - saucectl/saucectl-run:
-        env: |
-          MY_VAR=VAL1
-          MY_VAR2=VAL2
-        show-console-log: true
-        testing-environment: docker
-        suite: Firefox in docker
+          env: |
+            MY_VAR=VAL1
+            MY_VAR2=VAL2
+          show-console-log: true
+          testing-environment: docker
+          suite: Firefox in docker
 
 workflows:
   version: 2
