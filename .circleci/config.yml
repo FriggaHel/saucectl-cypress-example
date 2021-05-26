@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  saucectl: saucelabs/saucectl-run@dev:alpha
+  saucectl: saucelabs/saucectl-run@dev:fe37d7c
 
 jobs:
   test-cypress:
