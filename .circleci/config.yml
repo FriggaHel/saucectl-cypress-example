@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  saucectl: saucelabs/saucectl-run@1.0.0
+  saucectl: saucelabs/saucectl-run@dev:alpha
 
 jobs:
   test-cypress:
@@ -10,7 +10,13 @@ jobs:
       - checkout
       - setup_remote_docker:
           version: 20.10.2
-      - saucectl/saucectl-run
+      - saucectl/saucectl-run:
+        env: |
+          MY_VAR=VAL1
+          MY_VAR2=VAL2
+        show-console-log: true
+        testing-environment: docker
+        suite: Firefox in docker
 
 workflows:
   version: 2
