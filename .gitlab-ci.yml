@@ -24,8 +24,11 @@ test hybrid:
   image: docker:${DOCKER_VERSION}
   stage: test
   script:
-    - saucectl run -c .sauce/config.yml --ccy 10
-    - ls -lR artifacts
+    - |
+      saucectl run -c .sauce/config.yml --ccy 10
+      RET=${?}
+      ls -lR artifacts
+      exit ${RET}
   artifacts:
     when: always
     reports:
