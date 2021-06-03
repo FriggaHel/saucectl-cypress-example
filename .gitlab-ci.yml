@@ -25,6 +25,7 @@ test hybrid:
   stage: test
   script:
     - saucectl run -c .sauce/config.yml --ccy 10
+    - ls -lR artifacts
   artifacts:
     when: always
     reports:
