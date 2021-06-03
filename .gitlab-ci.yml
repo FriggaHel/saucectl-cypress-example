@@ -25,3 +25,7 @@ test hybrid:
   stage: test
   script:
     - saucectl run -c .sauce/config.yml --ccy 10
+  artifacts:
+    when: always
+    reports:
+      junit: artifacts/**/*.xml
