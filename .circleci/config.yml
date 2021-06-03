@@ -11,6 +11,8 @@ jobs:
       - setup_remote_docker:
           version: 20.10.2
       - saucectl/saucectl-run
+      - store_test_results:
+          path: artifacts/**/*.xml
 
 workflows:
   version: 2
