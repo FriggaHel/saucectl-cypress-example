@@ -26,6 +26,6 @@ context('Actions - 2 - Bis', () => {
   it('.type() - type into a DOM element - failed', () => {
     // https://on.cypress.io/type
     cy.get('.action-email')
-        .type('fake@email.com').should('have.value', 'failed@email.com')
+        .type('fake@email.com').should('have.value', 'fake@email.com')
   })
 })
